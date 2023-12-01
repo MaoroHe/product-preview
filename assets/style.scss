@@ -79,10 +79,13 @@ body {
             color: $darkcyan;
             margin-left: 25px;
             margin-right: 25px;
-        } .right__newprice p {
-            margin: auto;
-            font-size: 35px;
-        } .right__normalprice {
+            p {
+                margin: auto;
+                font-size: 35px;
+            }
+        }
+    
+        .right__normalprice {
             text-decoration: line-through;
             color: $darkgrayishblue;
         }
@@ -105,6 +108,7 @@ body {
             size: 5%;
             position-y: center;
             position-x: 27%;
+            
         }
         p {
             font-family: 'Montserrat', sans-serif;
@@ -116,4 +120,56 @@ body {
 
 .btn:hover {
     background-color: #244c3d;
+}
+
+// Version Mobile
+
+@media screen and (max-width: 1250px) {
+    html, body {
+        display: flex;
+        background-color: $cream;
+        height: 900px;
+        justify-content: center;
+        align-items: normal;
+    }
+
+    body {
+        width: 375px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        width: 50%;
+        height: 50%;
+        min-width: 370px;
+        min-height: 700px;
+        background-color: $white;
+        border-radius: 15px;
+        .container__left {
+            height: 40%;
+            width: 100%;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 0px;
+            background: {
+                image: url("image-product-desktop.jpg");
+                repeat: no-repeat;
+                size: cover;
+                position: center;
+            }    
+        }
+        .container__right {
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            width: 100%;
+        } #right__title {
+            margin-right: 50px;
+        }
+        .btn:hover {
+            background-color: #244c3d;
+        }   
+    }
 }
